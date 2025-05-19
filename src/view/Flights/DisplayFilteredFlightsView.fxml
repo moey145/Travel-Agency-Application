@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.geometry.Pos?>
+<?import javafx.scene.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.control.cell.*?> 
+
+
+<VBox alignment="CENTER" fx:controller="controller.Flights.DisplayFlightsController" styleClass="background" prefHeight="800.0" prefWidth="600.0" spacing="20" xmlns:fx="http://javafx.com/fxml/1">
+     <ImageView fitWidth="800" fitHeight="200">
+        <image>
+            <Image url="@/image/flight.png" preserveRatio="true"/>
+        </image>
+    </ImageView>    
+    <Separator/>
+    <Label text="Flights" styleClass="heading"/>
+    <Separator/>
+    <Label text="Country" alignment="center" />
+    <TextField fx:id="countryTf" styleClass="textfield" />
+    <TableView fx:id="flightsTv">
+    <columns>
+        <TableColumn fx:id="airlineClm" text = "Airline">
+	    <cellValueFactory><PropertyValueFactory property="airline"/></cellValueFactory>
+        </TableColumn>
+        <TableColumn fx:id="flightNoClm" text = "Flight Number">  
+        <cellValueFactory><PropertyValueFactory property="flightNo"/></cellValueFactory>
+        </TableColumn>
+        <TableColumn fx:id="takeoffClm" text = "Takeoff Country">       
+        <cellValueFactory><PropertyValueFactory property="takeoff"/></cellValueFactory>
+        </TableColumn>
+        <TableColumn fx:id="landingClm" text = "Landing Country">
+        <cellValueFactory><PropertyValueFactory property="landing"/></cellValueFactory>
+        </TableColumn>
+        <TableColumn fx:id="costClm" text = "Cost">   
+        <cellValueFactory><PropertyValueFactory property="cost"/></cellValueFactory>
+        </TableColumn>
+    </columns>
+    </TableView>
+    <Button fx:id="exitBtn" text="Close" styleClass="button" onAction="#handleExit" prefWidth="999999" />
+    <stylesheets>
+    <URL value="@/view/style.css"/>
+    </stylesheets>     
+</VBox>

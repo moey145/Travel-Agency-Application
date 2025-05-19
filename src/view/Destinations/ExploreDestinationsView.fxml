@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.geometry.Pos?>
+<?import javafx.scene.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+
+<VBox fx:controller="controller.Destinations.ExploreDestinationsController" alignment="CENTER" styleClass="background" prefHeight="200.0" prefWidth="600.0" spacing="20" xmlns:fx="http://javafx.com/fxml/1">
+    <ImageView fitWidth="800" fitHeight="200">
+        <image>
+            <Image url="@/image/destination.png" preserveRatio="true"/>
+        </image>
+    </ImageView>    
+    <Separator/>
+    <Label text="${'Hi '+ controller.agency.loggedInUser.name +',welcome to the Destinations section'}" styleClass="heading"/>
+    <Separator/>
+    <HBox alignment="center">
+    <Button fx:id="viewalldestinationsBtn" styleClass = "Button" text="View All Destination" onAction="#handleViewAllDestinations" prefWidth="999999"/>
+    <Button fx:id="filtereddestinationsBtn" styleClass = "Button" text="View Filtered Destina..." onAction="#handleFilteredDestinations" prefWidth="999999"/>
+    <Button fx:id="adddestinationBtn" styleClass = "Button" text="Add Destination" onAction="#handleAddDestination" prefWidth="999999"/>
+    <Button fx:id="removedestinationBtn" styleClass = "Button" text="Remove Destination" onAction="#handleRemoveDestination" prefWidth="999999"/>
+    <Button fx:id="exitBtn" styleClass = "Button" text="Close" onAction="#handleExit" prefWidth="999999"/>
+    </HBox>
+    <stylesheets>
+    <URL value="@/view/style.css"/>
+    </stylesheets>  
+</VBox>

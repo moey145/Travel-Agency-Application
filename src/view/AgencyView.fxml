@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.geometry.Pos?>
+<?import javafx.scene.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+
+<VBox fx:controller="controller.AgencyController" alignment="CENTER" styleClass="background" prefHeight="200.0" prefWidth="800.0" spacing="20" xmlns:fx="http://javafx.com/fxml/1">
+    <ImageView fitWidth="775" fitHeight="200">
+        <image>
+            <Image url="@/image/agency.png" preserveRatio="true"/>
+        </image>
+    </ImageView>    
+    <Separator/>
+    <Label text="${'Hi '+ controller.agency.loggedInUser.name +',welcome to the Prog2 Travel Agency'}" styleClass="heading"/>
+    <Separator/>
+    <HBox alignment="CENTER">
+    <Button alignment="CENTER" fx:id="ExploreFlightsBtn" styleClass = "Button" text="Explore Flights" onAction="#handleExploreFlights" prefWidth="800"/>
+    <Button alignment="CENTER" fx:id="ExploreDestinationsBtn" styleClass = "Button" text="Explore Destinations" onAction="#handleExploreDestinations" prefWidth="800"/>
+    <Button alignment="CENTER" fx:id="BookATripBtn" styleClass = "Button" text="Book a Trip" onAction="#handleBookATrip" prefWidth="800"/>
+    <Button alignment="CENTER" fx:id="ExitBtn" styleClass = "Button" text="Exit" onAction="#handleExit" prefWidth="800"/>
+    </HBox>
+    <stylesheets>
+    <URL value="@style.css"/>
+    </stylesheets> 
+</VBox>
+
+   

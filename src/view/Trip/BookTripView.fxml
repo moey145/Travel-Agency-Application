@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.geometry.Pos?>
+<?import javafx.scene.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+
+<VBox alignment="CENTER" fx:controller="controller.Trip.BookTripController" styleClass="background" prefHeight="200.0" prefWidth="600.0" spacing="20" xmlns:fx="http://javafx.com/fxml/1">
+     <ImageView fitWidth="800" fitHeight="200">
+        <image>
+            <Image url="@/image/trip.png" preserveRatio="true"/>
+        </image>
+    </ImageView>    
+    <Separator/>
+    <Label text="${'Hi '+ controller.trip.agency.loggedInUser.name +',welcome to the Trip section'}" styleClass="heading"/>
+    <Separator/>
+    <HBox alignment="center">
+    <Button fx:id="adddestinationBtn" styleClass = "Button" text="Add Destination" onAction="#handleAddDestination" prefWidth="999999"/>
+    <Button fx:id="removedestinationBtn" styleClass = "Button" text="Remove Destination" onAction="#handleRemoveDestination" prefWidth="999999"/>
+    <Button fx:id="addconnectingflightsBtn" styleClass = "Button" text="Add Connecting Flig..." onAction="#handleAddConnectingFlights" prefWidth="999999"/>
+    <Button fx:id="viewtripBtn" styleClass = "Button" text="View Trip" onAction="#handleViewTrip" prefWidth="999999"/>
+    <Button fx:id="exitBtn" styleClass = "Button" text="Close" onAction="#handleExit" prefWidth="999999"/>
+    </HBox>
+    <stylesheets>
+    <URL value="@/view/style.css"/>
+    </stylesheets> 
+</VBox>
