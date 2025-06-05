@@ -30,11 +30,7 @@ public class Administrators {
 
     //add way more
     public void insertDummyData() {
-        administrators.add(new Administrator("Davey", "david46", "123"));
-        administrators.add(new Administrator("Angela", "angela123", "mypw"));
-        administrators.add(new Administrator("Rafiqul", "boss", "secure"));
-        administrators.add(new Administrator("Vishesh", "legend", "notsecure"));
-        administrators.add(new Administrator("Zyzz", "1", "1"));
+        administrators.add(new Administrator("Mohamad", "Mohamad", "password"));
         administrators.add(new Administrator("test", "test", "test"));
 
     }
