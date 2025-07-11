@@ -9,23 +9,25 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.control.*?>
 
-<VBox alignment="CENTER" fx:controller="controller.Trip.BookTripController" styleClass="background" prefHeight="200.0" prefWidth="600.0" spacing="20" xmlns:fx="http://javafx.com/fxml/1">
-     <ImageView fitWidth="800" fitHeight="200">
-        <image>
-            <Image url="@/image/trip.png" preserveRatio="true"/>
-        </image>
-    </ImageView>    
-    <Separator/>
-    <Label text="${'Hi '+ controller.trip.agency.loggedInUser.name +',welcome to the Trip section'}" styleClass="heading"/>
-    <Separator/>
-    <HBox alignment="center">
-    <Button fx:id="adddestinationBtn" styleClass = "Button" text="Add Destination" onAction="#handleAddDestination" prefWidth="999999"/>
-    <Button fx:id="removedestinationBtn" styleClass = "Button" text="Remove Destination" onAction="#handleRemoveDestination" prefWidth="999999"/>
-    <Button fx:id="addconnectingflightsBtn" styleClass = "Button" text="Add Connecting Flig..." onAction="#handleAddConnectingFlights" prefWidth="999999"/>
-    <Button fx:id="viewtripBtn" styleClass = "Button" text="View Trip" onAction="#handleViewTrip" prefWidth="999999"/>
-    <Button fx:id="exitBtn" styleClass = "Button" text="Close" onAction="#handleExit" prefWidth="999999"/>
-    </HBox>
+<VBox alignment="CENTER" fx:controller="controller.Trip.BookTripController" styleClass="background" prefHeight="500.0" prefWidth="800.0" spacing="32" xmlns:fx="http://javafx.com/fxml/1">
+    <VBox alignment="CENTER" styleClass="card" maxWidth="700" spacing="24">
+        <ImageView fitWidth="500" fitHeight="120" styleClass="image-view">
+            <image>
+                <Image url="@/image/trip.png" preserveRatio="true"/>
+            </image>
+        </ImageView>    
+        <Label text="${'Plan Your Adventure, '+ controller.trip.agency.loggedInUser.name +'!'}" styleClass="heading"/>
+        <Label text="Create your perfect trip with multiple destinations" styleClass="subheading"/>
+        <Separator maxWidth="600"/>
+        <GridPane alignment="CENTER" hgap="16" vgap="16" maxWidth="600">
+            <Button fx:id="adddestinationBtn" styleClass="button" text="Add Destination" onAction="#handleAddDestination" prefWidth="280" prefHeight="50" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+            <Button fx:id="removedestinationBtn" styleClass="button" text="Remove Destination" onAction="#handleRemoveDestination" prefWidth="280" prefHeight="50" GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+            <Button fx:id="addconnectingflightsBtn" styleClass="button" text="Add Connecting Flights" onAction="#handleAddConnectingFlights" prefWidth="280" prefHeight="50" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+            <Button fx:id="viewtripBtn" styleClass="button" text="View Trip Details" onAction="#handleViewTrip" prefWidth="280" prefHeight="50" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+        </GridPane>
+        <Button fx:id="exitBtn" styleClass="button-secondary" text="Back to Main Menu" onAction="#handleExit" prefWidth="300"/>
+    </VBox>
     <stylesheets>
-    <URL value="@/view/style.css"/>
+        <URL value="@/view/style.css"/>
     </stylesheets> 
 </VBox>

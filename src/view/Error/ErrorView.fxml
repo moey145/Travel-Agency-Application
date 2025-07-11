@@ -10,19 +10,16 @@
 <?import javafx.scene.control.*?>
 
 
-<VBox style="-fx-padding: 0 10 10 10;" fx:controller="controller.Error.ErrorController" alignment="CENTER" styleClass="background" prefHeight="250.0" prefWidth="400.0" spacing="20" xmlns:fx="http://javafx.com/fxml/1">
-    <ImageView fitWidth="500" fitHeight="125">
-        <image >
-            <Image url="@/image/error.png" preserveRatio="true"/>
-        </image>
-    </ImageView>    
-    <Separator/>
-    <Label text="Error" styleClass="heading"/>
-    <Separator/>
-    <Label text="${controller.name}" styleClass="errorLabel"/>
-    <Label text="${controller.exception.message}"/>
-    <Button fx:id="exitBtn" text="Close" styleClass="button" prefWidth="9999" onAction="#handleExit"/>
+<VBox fx:controller="controller.Error.ErrorController" alignment="CENTER" styleClass="background" prefHeight="350.0" prefWidth="500.0" spacing="24" xmlns:fx="http://javafx.com/fxml/1">
+    <VBox alignment="CENTER" styleClass="card" maxWidth="450" spacing="20">
+        <Separator maxWidth="350"/>
+        <VBox alignment="CENTER" spacing="12" maxWidth="400">
+            <Label text="${controller.name}" styleClass="errorLabel"/>
+            <Label text="${controller.exception.message}" wrapText="true" textAlignment="CENTER" maxWidth="350"/>
+        </VBox>
+        <Button fx:id="exitBtn" text="Close" styleClass="button" prefWidth="200" onAction="#handleExit"/>
+    </VBox>
     <stylesheets>
-    <URL value="@/view/style.css"/>
+        <URL value="@/view/style.css"/>
     </stylesheets>  
 </VBox>

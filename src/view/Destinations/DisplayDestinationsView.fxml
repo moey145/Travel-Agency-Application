@@ -13,27 +13,28 @@
 
 
 
-<VBox alignment="CENTER" fx:controller="controller.Destinations.DisplayDestinationsController" styleClass="background" prefHeight="700.0" prefWidth="600.0" spacing="20" xmlns:fx="http://javafx.com/fxml/1">
-    <ImageView fitWidth="800" fitHeight="200">
-        <image>
-            <Image url="@/image/destination.png" preserveRatio="true"/>
-        </image>
-    </ImageView>    
-    <Separator/>
-    <Label text="Destinations" styleClass="heading"/>
-    <Separator/>
-    <TableView fx:id="destinationsTv" items="${controller.destinations.destinations}">
-    <columns>
-        <TableColumn fx:id="nameClm" text = "Name">
-	    <cellValueFactory><PropertyValueFactory property="name"/></cellValueFactory>
-        </TableColumn>
-        <TableColumn fx:id="countryClm" text = "Country">  
-        <cellValueFactory><PropertyValueFactory property="country"/></cellValueFactory>
-        </TableColumn>
-    </columns>
-    </TableView>
-    <Button fx:id="exitBtn" text="Close" styleClass="button" onAction="#handleExit" prefWidth="999999" />
+<VBox alignment="CENTER" fx:controller="controller.Destinations.DisplayDestinationsController" styleClass="background" prefHeight="700.0" prefWidth="800.0" spacing="24" xmlns:fx="http://javafx.com/fxml/1">
+    <VBox alignment="CENTER" styleClass="card" maxWidth="750" spacing="20">
+        <ImageView fitWidth="600" fitHeight="120" styleClass="image-view">
+            <image>
+                <Image url="@/image/destination.png" preserveRatio="true"/>
+            </image>
+        </ImageView>    
+        <Label text="Amazing Destinations" styleClass="heading"/>
+        <Separator maxWidth="650"/>
+        <TableView fx:id="destinationsTv" items="${controller.destinations.destinations}" styleClass="table-view" prefWidth="700" prefHeight="350">
+            <columns>
+                <TableColumn fx:id="nameClm" text="Destination Name" prefWidth="350">
+                    <cellValueFactory><PropertyValueFactory property="name"/></cellValueFactory>
+                </TableColumn>
+                <TableColumn fx:id="countryClm" text="Country" prefWidth="350">  
+                    <cellValueFactory><PropertyValueFactory property="country"/></cellValueFactory>
+                </TableColumn>
+            </columns>
+        </TableView>
+        <Button fx:id="exitBtn" text="Close" styleClass="button-secondary" onAction="#handleExit" prefWidth="200"/>
+    </VBox>
     <stylesheets>
-    <URL value="@/view/style.css"/>
+        <URL value="@/view/style.css"/>
     </stylesheets>  
 </VBox>

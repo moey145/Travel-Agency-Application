@@ -9,20 +9,27 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.control.*?>
 
-<VBox fx:controller="controller.LoginController" alignment="CENTER" styleClass="background" prefHeight="100.0" prefWidth="400.0" spacing="20" xmlns:fx="http://javafx.com/fxml/1"  >
-        <Separator/>
-        <Label text="Login" styleClass="heading"/>
-        <Separator/>
-        <GridPane alignment="center">
-        <Label text="Username:" styleClass="label" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
-        <TextField fx:id="usernameTf" styleClass="textfield" GridPane.columnIndex="1" GridPane.rowIndex="0"/>
-        <Label text="Password" styleClass="label" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
-        <PasswordField fx:id="passwordTf" styleClass="textfield" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
-        </GridPane>
-        <HBox alignment="center" prefWidth="999999">
-        <Button fx:id="loginBtn" text="Login" disable="true" styleClass="button" onAction="#handleLogin" prefWidth="999999"/>
-        <Button fx:id="exitBtn"  text="Exit"  styleClass="button" onAction="#handleExit" prefWidth="999999" />
-        </HBox>
+<VBox fx:controller="controller.LoginController" alignment="CENTER" styleClass="background" prefHeight="400.0" prefWidth="500.0" spacing="24" xmlns:fx="http://javafx.com/fxml/1">
+        <VBox alignment="CENTER" styleClass="card" maxWidth="400" spacing="20">
+            <ImageView fitWidth="100" fitHeight="100">
+                <image>
+                    <Image url="@/image/login_icon.png" preserveRatio="true"/>
+                </image>
+            </ImageView>
+            <Label text="Welcome Back" styleClass="heading"/>
+            <Label text="Please sign in to your account" styleClass="subheading"/>
+            <Separator maxWidth="300"/>
+            <GridPane alignment="center" hgap="15" vgap="15" maxWidth="300">
+                <Label text="Username:" styleClass="label" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+                <TextField fx:id="usernameTf" styleClass="textfield" GridPane.columnIndex="1" GridPane.rowIndex="0" prefWidth="180"/>
+                <Label text="Password:" styleClass="label" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+                <PasswordField fx:id="passwordTf" styleClass="password-field" GridPane.columnIndex="1" GridPane.rowIndex="1" prefWidth="180"/>
+            </GridPane>
+            <VBox spacing="12" alignment="CENTER" maxWidth="300">
+                <Button fx:id="loginBtn" text="Sign In" disable="true" styleClass="button" onAction="#handleLogin" prefWidth="300"/>
+                <Button fx:id="exitBtn" text="Exit" styleClass="button-secondary" onAction="#handleExit" prefWidth="300"/>
+            </VBox>
+        </VBox>
         <stylesheets>
             <URL value="@style.css"/>
         </stylesheets>

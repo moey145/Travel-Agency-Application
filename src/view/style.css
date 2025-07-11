@@ -1,49 +1,302 @@
-.label {
-    -fx-font-size: 10pt;
-    -fx-font-family: Helvetica;
-    -fx-text-fill: #168FC1;
-    -fx-font-weight: bold;
+/* Modern Design System */
+.root {
+    -fx-background-color: linear-gradient(to bottom, #f8fafc, #e2e8f0);
+    -fx-font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
 }
 
-.errorLabel {
-    -fx-text-fill: red;
-    -fx-text-weight: bold;
+.background {
+    -fx-background-color: linear-gradient(to bottom, #f8fafc, #e2e8f0);
+    -fx-padding: 20;
+}
+
+/* Typography */
+.label {
+    -fx-font-size: 12pt;
+    -fx-font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+    -fx-text-fill: #1e293b;
+    -fx-font-weight: 500;
+    -fx-padding: 5 0 5 0;
 }
 
 .heading {
-    /* style="-fx-font-size: 12pt; -fx-font-family: Helvetica; -fx-text-fill: #168FC1; -fx-font-weight: bold" */
-    -fx-font-size: 12pt;
-    -fx-font-family: Helvetica;
-    -fx-text-fill: #168FC1;
-    -fx-font-weight: bold;
+    -fx-font-size: 18pt;
+    -fx-font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+    -fx-text-fill: #1e293b;
+    -fx-font-weight: 600;
+    -fx-padding: 10 0 10 0;
 }
 
-.root {
-
+.subheading {
+    -fx-font-size: 14pt;
+    -fx-font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+    -fx-text-fill: #475569;
+    -fx-font-weight: 500;
 }
 
-.image {
-
-}
-
-.button{
-    -fx-text-fill: white;
-    -fx-font-family: "Arial Narrow";
+.errorLabel {
+    -fx-text-fill: #dc2626;
+    -fx-font-weight: 600;
     -fx-font-size: 11pt;
-    -fx-font-weight: bold;
-    -fx-border-color:#168FC1; 
-    -fx-background-color:#168FC1;
+    -fx-padding: 8;
+    -fx-background-color: #fef2f2;
+    -fx-border-color: #fecaca;
+    -fx-border-width: 1;
+    -fx-border-radius: 8;
+    -fx-background-radius: 8;
 }
 
-.button:hover{     
-  -fx-background-color:#0B729C; 
-  -fx-text-fill:white;
-  -fx-font-weight:bold; 
-  fx-font-size: 11pt;
-  -fx-border-color:#168FC1; 
+/* Modern Buttons */
+.button {
+    -fx-background-color: linear-gradient(to bottom, #3b82f6, #2563eb);
+    -fx-text-fill: white;
+    -fx-font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+    -fx-font-size: 12pt;
+    -fx-font-weight: 500;
+    -fx-padding: 12 20 12 20;
+    -fx-background-radius: 8;
+    -fx-border-radius: 8;
+    -fx-border-color: transparent;
+    -fx-border-width: 0;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 4, 0, 0, 2);
+    -fx-cursor: hand;
+    -fx-transition: all 0.2s ease-in-out;
 }
 
-.textfield {
-    -fx-border-radius: 0;
-    -fx-background-color: rgb(226, 243, 255);
+.button:hover {
+    -fx-background-color: linear-gradient(to bottom, #2563eb, #1d4ed8);
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.15), 6, 0, 0, 3);
+    -fx-scale-x: 1.02;
+    -fx-scale-y: 1.02;
+}
+
+.button:armed {
+    -fx-background-color: linear-gradient(to bottom, #1d4ed8, #1e40af);
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 2, 0, 0, 1);
+    -fx-scale-x: 0.98;
+    -fx-scale-y: 0.98;
+}
+
+.button:disabled {
+    -fx-background-color: #9ca3af;
+    -fx-text-fill: #6b7280;
+    -fx-effect: none;
+    -fx-opacity: 0.6;
+}
+
+/* Secondary Button Style */
+.button-secondary {
+    -fx-background-color: linear-gradient(to bottom, #f1f5f9, #e2e8f0);
+    -fx-text-fill: #475569;
+    -fx-border-color: #cbd5e1;
+    -fx-border-width: 1;
+    -fx-font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+    -fx-font-size: 12pt;
+    -fx-font-weight: 500;
+    -fx-padding: 12 20 12 20;
+    -fx-background-radius: 8;
+    -fx-border-radius: 8;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.05), 2, 0, 0, 1);
+    -fx-cursor: hand;
+}
+
+.button-secondary:hover {
+    -fx-background-color: linear-gradient(to bottom, #e2e8f0, #cbd5e1);
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 4, 0, 0, 2);
+}
+
+/* Success button variant */
+.button-success {
+    -fx-background-color: linear-gradient(to bottom, #10b981, #059669);
+    -fx-text-fill: white;
+    -fx-font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+    -fx-font-size: 12pt;
+    -fx-font-weight: 500;
+    -fx-padding: 12 20 12 20;
+    -fx-background-radius: 8;
+    -fx-border-radius: 8;
+    -fx-border-color: transparent;
+    -fx-border-width: 0;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 4, 0, 0, 2);
+    -fx-cursor: hand;
+}
+
+.button-success:hover {
+    -fx-background-color: linear-gradient(to bottom, #059669, #047857);
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.15), 6, 0, 0, 3);
+}
+
+/* Danger button variant */
+.button-danger {
+    -fx-background-color: linear-gradient(to bottom, #ef4444, #dc2626);
+    -fx-text-fill: white;
+    -fx-font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+    -fx-font-size: 12pt;
+    -fx-font-weight: 500;
+    -fx-padding: 12 20 12 20;
+    -fx-background-radius: 8;
+    -fx-border-radius: 8;
+    -fx-border-color: transparent;
+    -fx-border-width: 0;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 4, 0, 0, 2);
+    -fx-cursor: hand;
+}
+
+.button-danger:hover {
+    -fx-background-color: linear-gradient(to bottom, #dc2626, #b91c1c);
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.15), 6, 0, 0, 3);
+}
+
+/* Modern Input Fields */
+.textfield, .password-field {
+    -fx-background-color: white;
+    -fx-border-color: #d1d5db;
+    -fx-border-width: 1;
+    -fx-border-radius: 8;
+    -fx-background-radius: 8;
+    -fx-padding: 12 16 12 16;
+    -fx-font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+    -fx-font-size: 11pt;
+    -fx-text-fill: #374151;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.05), 2, 0, 0, 1);
+    -fx-transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.textfield:focused, .password-field:focused {
+    -fx-border-color: #3b82f6;
+    -fx-border-width: 2;
+    -fx-effect: dropshadow(gaussian, rgba(59,130,246,0.25), 4, 0, 0, 0);
+}
+
+/* Modern Tables */
+.table-view {
+    -fx-background-color: white;
+    -fx-border-color: #e5e7eb;
+    -fx-border-width: 1;
+    -fx-border-radius: 12;
+    -fx-background-radius: 12;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.08), 8, 0, 0, 4);
+}
+
+.table-view .column-header {
+    -fx-background-color: linear-gradient(to bottom, #f9fafb, #f3f4f6);
+    -fx-text-fill: #374151;
+    -fx-font-weight: 600;
+    -fx-font-size: 11pt;
+    -fx-padding: 12;
+    -fx-border-color: #e5e7eb;
+}
+
+.table-view .table-cell {
+    -fx-padding: 12;
+    -fx-font-size: 10pt;
+    -fx-text-fill: #4b5563;
+    -fx-border-color: #f3f4f6;
+}
+
+.table-row-cell:selected {
+    -fx-background-color: #eff6ff;
+    -fx-text-fill: #1e40af;
+}
+
+.table-row-cell:hover {
+    -fx-background-color: #f8fafc;
+}
+
+.table-view .table-row-cell:odd {
+    -fx-background-color: #f8fafc;
+}
+
+.table-view .table-row-cell:even {
+    -fx-background-color: white;
+}
+
+/* Modern List View */
+.list-view {
+    -fx-background-color: white;
+    -fx-border-color: #e5e7eb;
+    -fx-border-width: 1;
+    -fx-border-radius: 12;
+    -fx-background-radius: 12;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.08), 8, 0, 0, 4);
+}
+
+.list-cell {
+    -fx-padding: 12 16 12 16;
+    -fx-font-size: 11pt;
+    -fx-text-fill: #374151;
+    -fx-background-color: transparent;
+}
+
+.list-cell:selected {
+    -fx-background-color: #eff6ff;
+    -fx-text-fill: #1e40af;
+}
+
+.list-cell:hover {
+    -fx-background-color: #f8fafc;
+}
+
+/* Cards and Containers */
+.card {
+    -fx-background-color: white;
+    -fx-border-color: #e5e7eb;
+    -fx-border-width: 1;
+    -fx-border-radius: 12;
+    -fx-background-radius: 12;
+    -fx-padding: 24;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.08), 8, 0, 0, 4);
+}
+
+/* Separators */
+.separator .line {
+    -fx-border-color: #e5e7eb;
+    -fx-border-width: 1 0 0 0;
+    -fx-opacity: 0.6;
+}
+
+/* Improved spacing for layouts */
+.vbox, .hbox {
+    -fx-spacing: 16;
+}
+
+.grid-pane {
+    -fx-hgap: 16;
+    -fx-vgap: 12;
+}
+
+/* Image styling */
+.image-view {
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 8, 0, 0, 4);
+}
+
+/* Status indicators */
+.status-success {
+    -fx-text-fill: #059669;
+    -fx-font-weight: 600;
+}
+
+.status-warning {
+    -fx-text-fill: #d97706;
+    -fx-font-weight: 600;
+}
+
+.status-error {
+    -fx-text-fill: #dc2626;
+    -fx-font-weight: 600;
+}
+
+/* Enhanced spacing for modern layouts */
+.modern-spacing {
+    -fx-spacing: 20;
+}
+
+/* Improved text styling */
+.text-muted {
+    -fx-text-fill: #6b7280;
+    -fx-font-size: 10pt;
+}
+
+.text-small {
+    -fx-font-size: 9pt;
+    -fx-text-fill: #9ca3af;
 }

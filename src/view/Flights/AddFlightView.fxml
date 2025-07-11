@@ -9,32 +9,33 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.control.*?>
 
-<VBox alignment="CENTER" fx:controller="controller.Flights.ModifyFlightsController" styleClass="background" prefHeight="420.0" prefWidth="600.0" spacing="20" xmlns:fx="http://javafx.com/fxml/1">
-         <ImageView fitWidth="800" fitHeight="200">
-        <image>
-            <Image url="@/image/flight.png" preserveRatio="true"/>
-        </image>
-    </ImageView>    
-    <Separator/>
-    <Label text="Add a Flight" styleClass="heading"/>
-    <Separator/>
-    <GridPane alignment="center" hgap="10" vgap="10">
-    <Label text="Airline:" styleClass="label" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
-    <TextField fx:id="airlineTf" styleClass="textfield" GridPane.columnIndex="1" GridPane.rowIndex="0"/>
-    <Label text="Flight Number:" styleClass="label" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
-    <TextField fx:id="flightnumberTf" styleClass="textfield" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
-    <Label text="Takeoff:" styleClass="label" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
-    <TextField fx:id="takeoffTf" styleClass="textfield" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
-    <Label text="Landing:" styleClass="label" GridPane.columnIndex="0" GridPane.rowIndex="3"/>
-    <TextField fx:id="landingTf" styleClass="textfield" GridPane.columnIndex="1" GridPane.rowIndex="3"/>
-    <Label text="Cost:" styleClass="label" GridPane.columnIndex="0" GridPane.rowIndex="4"/>
-    <TextField fx:id="costTf" styleClass="textfield" GridPane.columnIndex="1" GridPane.rowIndex="4"/>
-    </GridPane>
-    <HBox alignment="center" prefWidth="999999">
-    <Button fx:id="addflightBtn" text="Add Flight" disable="true" styleClass="button" onAction="#handleAddFlight" prefWidth="999999"/>
-    <Button fx:id="exitBtn" text="Close" styleClass="button" onAction="#handleExit" prefWidth="999999" />
-    </HBox>
+<VBox alignment="CENTER" fx:controller="controller.Flights.ModifyFlightsController" styleClass="background" prefHeight="600.0" prefWidth="700.0" spacing="24" xmlns:fx="http://javafx.com/fxml/1">
+    <VBox alignment="CENTER" styleClass="card" maxWidth="600" spacing="20">
+        <ImageView fitWidth="500" fitHeight="120" styleClass="image-view">
+            <image>
+                <Image url="@/image/flight.png" preserveRatio="true"/>
+            </image>
+        </ImageView>    
+        <Label text="Add New Flight" styleClass="heading"/>
+        <Separator maxWidth="500"/>
+        <GridPane alignment="center" hgap="20" vgap="16" maxWidth="450">
+            <Label text="Airline:" styleClass="label" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+            <TextField fx:id="airlineTf" styleClass="textfield" GridPane.columnIndex="1" GridPane.rowIndex="0" prefWidth="250"/>
+            <Label text="Flight Number:" styleClass="label" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+            <TextField fx:id="flightnumberTf" styleClass="textfield" GridPane.columnIndex="1" GridPane.rowIndex="1" prefWidth="250"/>
+            <Label text="Takeoff Country:" styleClass="label" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+            <TextField fx:id="takeoffTf" styleClass="textfield" GridPane.columnIndex="1" GridPane.rowIndex="2" prefWidth="250"/>
+            <Label text="Landing Country:" styleClass="label" GridPane.columnIndex="0" GridPane.rowIndex="3"/>
+            <TextField fx:id="landingTf" styleClass="textfield" GridPane.columnIndex="1" GridPane.rowIndex="3" prefWidth="250"/>
+            <Label text="Cost ($):" styleClass="label" GridPane.columnIndex="0" GridPane.rowIndex="4"/>
+            <TextField fx:id="costTf" styleClass="textfield" GridPane.columnIndex="1" GridPane.rowIndex="4" prefWidth="250"/>
+        </GridPane>
+        <HBox alignment="center" spacing="16" maxWidth="400">
+            <Button fx:id="addflightBtn" text="Add Flight" disable="true" styleClass="button" onAction="#handleAddFlight" prefWidth="180"/>
+            <Button fx:id="exitBtn" text="Cancel" styleClass="button-secondary" onAction="#handleExit" prefWidth="180"/>
+        </HBox>
+    </VBox>
     <stylesheets>
-    <URL value="@/view/style.css"/>
+        <URL value="@/view/style.css"/>
     </stylesheets>  
 </VBox>

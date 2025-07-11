@@ -11,21 +11,23 @@
 <?import javafx.scene.control.*?>
 <?import javafx.geometry.Insets?>  
 
-<VBox alignment="CENTER" fx:controller="controller.Trip.DisplayTripController" styleClass="background" prefHeight="700.0" prefWidth="600.0" spacing="20" xmlns:fx="http://javafx.com/fxml/1">
-    <ImageView fitWidth="580" fitHeight="200">
-        <image>
-            <Image url="@/image/trip.png" preserveRatio="true"/>
-        </image>
-    </ImageView>    
-    <Separator/>
-    <Label text="Your Trip" styleClass="heading"/>
-    <Separator/>
-    <ListView prefWidth="580" fx:id = "tripsLv"/>
-    <HBox alignment="center" prefWidth="999999">
-    <Button fx:id="viewindividualBtn" text="View Individual" styleClass="button" onAction="#handleViewIndividual" prefWidth="999999"/>
-    <Button fx:id="exitBtn" text="Close" styleClass="button" onAction="#handleExit" prefWidth="999999" />
-    </HBox>       
+<VBox alignment="CENTER" fx:controller="controller.Trip.DisplayTripController" styleClass="background" prefHeight="700.0" prefWidth="800.0" spacing="24" xmlns:fx="http://javafx.com/fxml/1">
+    <VBox alignment="CENTER" styleClass="card" maxWidth="750" spacing="20">
+        <ImageView fitWidth="500" fitHeight="120" styleClass="image-view">
+            <image>
+                <Image url="@/image/trip.png" preserveRatio="true"/>
+            </image>
+        </ImageView>    
+        <Label text="Your Trip Itinerary" styleClass="heading"/>
+        <Label text="Review your complete travel plan" styleClass="subheading"/>
+        <Separator maxWidth="650"/>
+        <ListView fx:id="tripsLv" styleClass="list-view" prefWidth="700" prefHeight="300"/>
+        <HBox alignment="center" spacing="16" maxWidth="400">
+            <Button fx:id="viewindividualBtn" text="View Details" styleClass="button" onAction="#handleViewIndividual" prefWidth="180"/>
+            <Button fx:id="exitBtn" text="Close" styleClass="button-secondary" onAction="#handleExit" prefWidth="180"/>
+        </HBox>       
+    </VBox>
     <stylesheets>
-    <URL value="@/view/style.css"/>
+        <URL value="@/view/style.css"/>
     </stylesheets> 
 </VBox>

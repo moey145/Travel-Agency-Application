@@ -11,23 +11,25 @@
 <?import javafx.scene.control.cell.*?> 
 
 
-<VBox alignment="CENTER" fx:controller="controller.Flights.ExploreFlightsController" styleClass="background" prefHeight="200.0" prefWidth="600.0" spacing="20" xmlns:fx="http://javafx.com/fxml/1">
-    <ImageView fitWidth="800" fitHeight="200">
-        <image>
-            <Image url="@/image/flight.png" preserveRatio="true"/>
-        </image>
-    </ImageView>    
-    <Separator/>
-    <Label text="${'Hi '+ controller.agency.loggedInUser.name +',welcome to the Flights section'}" styleClass="heading"/>
-    <Separator/>
-    <HBox alignment="center">
-    <Button fx:id="viewallflightsBtn" styleClass = "Button" text="View All Flights" onAction="#handleViewAllFlights" prefWidth="999999"/>
-    <Button fx:id="filteredflightsBtn" styleClass = "Button" text="View Flights by Coun..." onAction="#handleFilteredFlights" prefWidth="999999"/>
-    <Button fx:id="addflightBtn" styleClass = "Button" text="Add Flight" onAction="#handleAddFlight" prefWidth="999999"/>
-    <Button fx:id="removeflightBtn" styleClass = "Button" text="Remove Flight" onAction="#handleRemoveFlight" prefWidth="999999"/>
-    <Button fx:id="exitBtn" styleClass = "Button" text="Close" onAction="#handleExit" prefWidth="999999"/>
-    </HBox>
+<VBox alignment="CENTER" fx:controller="controller.Flights.ExploreFlightsController" styleClass="background" prefHeight="500.0" prefWidth="800.0" spacing="32" xmlns:fx="http://javafx.com/fxml/1">
+    <VBox alignment="CENTER" styleClass="card" maxWidth="700" spacing="24">
+        <ImageView fitWidth="500" fitHeight="120" styleClass="image-view">
+            <image>
+                <Image url="@/image/flight.png" preserveRatio="true"/>
+            </image>
+        </ImageView>    
+        <Label text="${'Welcome to Flights, '+ controller.agency.loggedInUser.name +'!'}" styleClass="heading"/>
+        <Label text="Manage flights and explore travel options" styleClass="subheading"/>
+        <Separator maxWidth="600"/>
+        <GridPane alignment="CENTER" hgap="16" vgap="16" maxWidth="600">
+            <Button fx:id="viewallflightsBtn" styleClass="button" text="View All Flights" onAction="#handleViewAllFlights" prefWidth="280" prefHeight="50" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+            <Button fx:id="filteredflightsBtn" styleClass="button" text="Filter by Country" onAction="#handleFilteredFlights" prefWidth="280" prefHeight="50" GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+            <Button fx:id="addflightBtn" styleClass="button" text="Add Flight" onAction="#handleAddFlight" prefWidth="280" prefHeight="50" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+            <Button fx:id="removeflightBtn" styleClass="button" text="Remove Flight" onAction="#handleRemoveFlight" prefWidth="280" prefHeight="50" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+        </GridPane>
+        <Button fx:id="exitBtn" styleClass="button-secondary" text="Back to Main Menu" onAction="#handleExit" prefWidth="300"/>
+    </VBox>
     <stylesheets>
-    <URL value="@/view/style.css"/>
+        <URL value="@/view/style.css"/>
     </stylesheets>    
 </VBox>
