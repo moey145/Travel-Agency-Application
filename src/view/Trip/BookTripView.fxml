@@ -11,7 +11,7 @@
 
 <VBox alignment="CENTER" fx:controller="controller.Trip.BookTripController" styleClass="background" prefHeight="500.0" prefWidth="800.0" spacing="32" xmlns:fx="http://javafx.com/fxml/1">
     <VBox alignment="CENTER" styleClass="card" maxWidth="700" spacing="24">
-        <ImageView fitWidth="500" fitHeight="120" styleClass="image-view">
+        <ImageView fitWidth="700" fitHeight="160" styleClass="image-view">
             <image>
                 <Image url="@/image/trip.png" preserveRatio="true"/>
             </image>

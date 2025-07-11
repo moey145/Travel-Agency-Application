@@ -14,7 +14,7 @@
 
 <VBox alignment="CENTER" fx:controller="controller.Flights.DisplayFlightsController" styleClass="background" prefHeight="800.0" prefWidth="900.0" spacing="24" xmlns:fx="http://javafx.com/fxml/1">
     <VBox alignment="CENTER" styleClass="card" maxWidth="850" spacing="20">
-        <ImageView fitWidth="600" fitHeight="120" styleClass="image-view">
+        <ImageView fitWidth="800" fitHeight="160" styleClass="image-view">
             <image>
                 <Image url="@/image/flight.png" preserveRatio="true"/>
             </image>

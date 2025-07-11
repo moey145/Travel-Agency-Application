@@ -12,6 +12,12 @@
 
 <VBox fx:controller="controller.Error.ErrorController" alignment="CENTER" styleClass="background" prefHeight="350.0" prefWidth="500.0" spacing="24" xmlns:fx="http://javafx.com/fxml/1">
     <VBox alignment="CENTER" styleClass="card" maxWidth="450" spacing="20">
+        <ImageView fitWidth="80" fitHeight="80">
+            <image>
+                <Image url="@/image/error.png" preserveRatio="true"/>
+            </image>
+        </ImageView>    
+        <Label text="Oops! Something went wrong" styleClass="heading"/>
         <Separator maxWidth="350"/>
         <VBox alignment="CENTER" spacing="12" maxWidth="400">
             <Label text="${controller.name}" styleClass="errorLabel"/>
